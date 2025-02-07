@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Priya - Rose Day Special</title>
+    <style>
+        body {
+            background: url('r1.jpg') no-repeat center top fixed;
+            background-size: cover;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            animation: backgroundChange 5s infinite alternate ease-in-out;
+        }
+        @keyframes backgroundChange {
+            0% { background-image: url('r1.jpg'); }
+            100% { background-image: url('r2.jpg'); }
+        }
+        h1 {
+            color: #ffd700;
+            font-size: 36px;
+            text-shadow: 2px 2px 5px black;
+        }
+        .letter {
+            font-size: 22px;
+            color: white;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            display: inline-block;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+            width: 60%;
+            text-align: left;
+        }
+        .hindi-text {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffcccb;
+        }
+        .love-song {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Rose Day, Priya! 🌹</h1>
+    
+    <div class="letter">
+        <p>Dear Priya,</p>
+        <p class="hindi-text">Gulab ki tarah teri har baat pyaari lage, 🌹<br>
+        Teri hansi meri duniya se nyaari lage. ❤️<br>
+        Har subah jab tera deedaar ho jaaye, 💕<br>
+        Meri zindagi ko jannat ki sawaari lage. ✨</p>
+        <p>Happy Rose Day, mY LoVe! 🫀🌸</p>
+        <p>Forever Yours,<br>Parikshit</p>
+    </div>
+    
+    <div class="love-song">
+        <audio id="bg-music" autoplay loop>
+            <source src="song.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    
+    <script>
+        window.onload = function() {
+            var audio = document.getElementById("bg-music");
+            audio.volume = 1.0;
+            audio.play().catch(error => {
+                console.log("Autoplay blocked: " + error);
+                setTimeout(() => audio.play(), 1000); // Delay retry
+            });
+        };
+    </script>
+</body>
+</html>
